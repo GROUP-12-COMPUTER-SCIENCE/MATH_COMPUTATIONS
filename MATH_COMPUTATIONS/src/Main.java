@@ -7,6 +7,8 @@ public class Main {
 
         // Call the printMultiplication() method on the Multiplication object.
         multiplication.printMultiplication();
+        Division division = new Division(50.0, 10.0);
+        division.printDivision();
     }
 }
 
