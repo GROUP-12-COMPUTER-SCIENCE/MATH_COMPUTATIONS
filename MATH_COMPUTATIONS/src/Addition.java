@@ -1,11 +1,5 @@
 public class Addition {
-    double a;
-    double b;
-    public Addition(double a, double b) {
-        this.a = a;
-        this.b = b;
-    }
-    public double add () {
-        return (a - b);
+    public double add (double a , double b) {
+        return (a + b);
     }
 }
