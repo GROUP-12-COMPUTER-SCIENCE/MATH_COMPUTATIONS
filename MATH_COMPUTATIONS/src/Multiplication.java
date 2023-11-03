@@ -1,16 +1,28 @@
-public class Multiplication {
-    double firstNumber;
-    double secondNumber;
-    double mult;
+class Multiplication {
+    private double firstNumber;
+    private double secondNumber;
 
-    public Multiplication(double firstNumber, double secondNumber) {
+    public Multiplication()
+    {
+    }
+    public Multiplication(double firstNumber, double secondNumber)
+
+    {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
-        mult = firstNumber*secondNumber;
     }
 
-    public void printMultiplication() {
-        System.out.println(mult);
+    public  void setFirstNumber(double firstNumber)
+    {
+        this.firstNumber = firstNumber;
+    }
+    public void  setSecondNumber(double secondNumber)
+    {
+        this.secondNumber = secondNumber;
+    }
+
+    public double multiply() {
+        return firstNumber * secondNumber;
     }
 }
 
