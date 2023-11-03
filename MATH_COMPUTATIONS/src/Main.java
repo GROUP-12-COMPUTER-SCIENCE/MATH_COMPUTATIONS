@@ -11,9 +11,15 @@ public class Main
             System.out.println("3)ADDITION");
             System.out.println("4)SUBTRACTION");
             System.out.println("5)MODULUS");
+            System.out.println("6)EXIT");
             System.out.print("CHOICE:");
             Scanner input = new Scanner(System.in);
             choice = input.nextInt();
+
+            if (choice == 6) {
+            System.out.println("EXITING................");
+            break;
+            }
 
             System.out.println("Enter the first number");
             double firstNumber = input.nextDouble();
@@ -43,7 +49,6 @@ public class Main
             } else if (choice == 5) {
                 System.out.println("The modulus is " + mod);
             }
-
         }
     }
 }
