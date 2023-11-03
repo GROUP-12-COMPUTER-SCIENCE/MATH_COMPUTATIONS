@@ -6,6 +6,6 @@ public class Addition {
         this.b = b;
     }
     public double add () {
-        return (a - b);
+        return (a + b);
     }
 }
