@@ -30,6 +30,10 @@ public class Main
             Multiplication multiplication = new Multiplication();
             multiplication.setFirstNumber(firstNumber);
             multiplication.setSecondNumber(secondNumber);
+            double product = multiplication.multiply();
+
+            Division division = new Division(firstNumber,secondNumber);
+            double div = division.divide();
 
             Addition addition = new Addition(firstNumber, secondNumber);
             double sum = addition.add();
@@ -37,11 +41,10 @@ public class Main
             modulus Modulus = new modulus(firstNumber, secondNumber);
             double mod = Modulus.mod();
 
-            double product = multiplication.multiply();
             if (choice == 1) {
                 System.out.println("The product is " + product);
             } else if (choice == 2) {
-                System.out.println("The division is " + product);
+                System.out.println("The division is " + div);
             } else if (choice == 3) {
                 System.out.println("The addition is " + sum);
             } else if (choice == 4) {
