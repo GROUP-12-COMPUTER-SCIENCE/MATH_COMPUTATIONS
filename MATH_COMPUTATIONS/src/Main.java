@@ -13,27 +13,39 @@ public class Main
             System.out.println("4)SUBTRACTION");
             System.out.println("5)MODULUS");
             System.out.println("6)Area of a circle");
-            System.out.println("7)EXIT");
+            System.out.println("7)Circumference of a circle");
+            System.out.println("8)EXIT");
             System.out.print("CHOICE:");
             Scanner input = new Scanner(System.in);
             choice = input.nextInt();
 
             double rad = 0;
 
+            double firstNumber = 0;
+            double secondNumber = 0;
+            double radius = 5;
             if (choice == 6) {
                 System.out.println("Enter radius");
                 rad = input.nextDouble();
 
-            } else if (choice == 7) {
+            }
+//            radius = rad;
+            else if (choice == 7) {
+                System.out.println("Enter radius");
+                rad = input.nextDouble();
+
+            }
+            else if (choice == 8) {
                 System.out.println("EXITING................");
                 break;
+            } else {
+                System.out.println("Enter the first number");
+                firstNumber = input.nextDouble();
+
+                System.out.println("Enter the second number");
+                secondNumber = input.nextDouble();
             }
 
-            System.out.println("Enter the first number");
-            double firstNumber = input.nextDouble();
-
-            System.out.println("Enter the second number");
-            double secondNumber = input.nextDouble();
 
             Multiplication multiplication = new Multiplication();
             multiplication.setFirstNumber(firstNumber);
@@ -53,9 +65,12 @@ public class Main
             double mod = Modulus.mod();
 
 
-            AreaCircle areaCircle = new AreaCircle(rad);
+            AreaCircle areaCircle = new AreaCircle(radius);
             areaCircle.setRadius(rad);
             double aCircle = areaCircle.Area();
+
+            CircumferenceOfCircle Circumference = new CircumferenceOfCircle(rad);
+            double circum = Circumference.circumference();
             if (choice == 1) {
                 System.out.println("The product is " + product);
             } else if (choice == 2) {
@@ -68,6 +83,9 @@ public class Main
                 System.out.println("The modulus is " + mod);
             } else if (choice == 6) {
                 System.out.println("The area of the circle is " + aCircle);
+            }
+            else if (choice == 7) {
+                System.out.println("The circumference of the circle is " + circum);
             }
         }
     }
