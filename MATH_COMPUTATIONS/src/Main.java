@@ -25,6 +25,8 @@ public class Main
             double firstNumber = 0;
             double secondNumber = 0;
             double radius = 5;
+            double base =0;
+            double height =0;
             if (choice == 6) {
                 System.out.println("Enter radius");
                 rad = input.nextDouble();
