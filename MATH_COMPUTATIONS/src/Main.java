@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main
 {
     public  static void main(String[] args) {
+
         while (true) {
             int choice;
             System.out.println("WHICH OPERATION DOU YOU WANT TO CARRY OUT");
@@ -11,12 +12,17 @@ public class Main
             System.out.println("3)ADDITION");
             System.out.println("4)SUBTRACTION");
             System.out.println("5)MODULUS");
-            System.out.println("6)EXIT");
+            System.out.println("6)Area of a circle");
+            System.out.println("7)EXIT");
             System.out.print("CHOICE:");
             Scanner input = new Scanner(System.in);
             choice = input.nextInt();
 
-            if (choice == 6) {
+            if (choice == 6){
+                System.out.println("Enter radius");
+                double rad = input.nextDouble();
+            }
+            else if (choice == 7) {
             System.out.println("EXITING................");
             break;
             }
@@ -44,6 +50,10 @@ public class Main
             modulus Modulus = new modulus(firstNumber, secondNumber);
             double mod = Modulus.mod();
 
+
+            AreaCircle areaCircle = new AreaCircle(rad);
+            areaCircle.setRadius(rad);
+            double aCircle = areaCircle.Area();
             if (choice == 1) {
                 System.out.println("The product is " + product);
             } else if (choice == 2) {
@@ -54,6 +64,8 @@ public class Main
                 System.out.println("The subtraction is " + diff);
             } else if (choice == 5) {
                 System.out.println("The modulus is " + mod);
+            } else if (choice==6) {
+                System.out.println("The area of the circle is " + mod);
             }
         }
     }
