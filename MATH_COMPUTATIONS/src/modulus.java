@@ -5,7 +5,7 @@ public class modulus {
         this.a = a;
         this.b = b;
     }
-    public double add () {
+    public double mod () {
         return (a % b);
     }
 }
