@@ -38,6 +38,9 @@ public class Main
             Addition addition = new Addition(firstNumber, secondNumber);
             double sum = addition.add();
 
+            Subtraction sub =new Subtraction(firstNumber,secondNumber);
+            double diff =sub.Subtr();
+
             modulus Modulus = new modulus(firstNumber, secondNumber);
             double mod = Modulus.mod();
 
@@ -48,7 +51,7 @@ public class Main
             } else if (choice == 3) {
                 System.out.println("The addition is " + sum);
             } else if (choice == 4) {
-                System.out.println("The subtraction is " + product);
+                System.out.println("The subtraction is " + diff);
             } else if (choice == 5) {
                 System.out.println("The modulus is " + mod);
             }
