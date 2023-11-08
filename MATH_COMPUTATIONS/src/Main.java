@@ -14,7 +14,8 @@ public class Main
             System.out.println("5)MODULUS");
             System.out.println("6)Area of a circle");
             System.out.println("7)Circumference of a circle");
-            System.out.println("8)EXIT");
+            System.out.println("8)Area of a Triangle");
+            System.out.println("9)EXIT");
             System.out.print("CHOICE:");
             Scanner input = new Scanner(System.in);
             choice = input.nextInt();
@@ -35,7 +36,13 @@ public class Main
                 rad = input.nextDouble();
 
             }
-            else if (choice == 8) {
+                else if(choice ==8){
+                    System.out.println("Enter base");
+                    base=input.nextDouble();
+                    System.out.println("Enter height");
+                    height =input.nextDouble();
+                }
+            else if (choice == 9) {
                 System.out.println("EXITING................");
                 break;
             } else {
@@ -71,6 +78,9 @@ public class Main
 
             CircumferenceOfCircle Circumference = new CircumferenceOfCircle(rad);
             double circum = Circumference.circumference();
+
+            AreaTriangle areaTriangle =new AreaTriangle(base,height);
+            double aTriangle= areaTriangle.Area();
             if (choice == 1) {
                 System.out.println("The product is " + product);
             } else if (choice == 2) {
@@ -86,6 +96,9 @@ public class Main
             }
             else if (choice == 7) {
                 System.out.println("The circumference of the circle is " + circum);
+            }
+            else if (choice ==8) {
+                System.out.println("The area of the Triangle is "+ aTriangle);
             }
         }
     }
