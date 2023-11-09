@@ -7,7 +7,7 @@ public class Division {
         this.firstNumber = firstNumber;
         this.secondNumber = secondNumber;
     }
-
+// Method to perform division and return the result
     public double divide() {
 
         return firstNumber/secondNumber;
