@@ -9,7 +9,7 @@ public class Division {
     }
 
     public double divide() {
-// Perform the division and return the result
+
         return firstNumber/secondNumber;
     }
 }
