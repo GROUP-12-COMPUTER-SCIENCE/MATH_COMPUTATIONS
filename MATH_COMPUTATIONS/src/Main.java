@@ -15,7 +15,8 @@ public class Main
             System.out.println("6)Area of a circle");
             System.out.println("7)Circumference of a circle");
             System.out.println("8)Area of a Triangle");
-            System.out.println("9)EXIT");
+            System.out.println("9)Area of a Rectangle");
+            System.out.println("10)EXIT");
             System.out.print("CHOICE:");
             Scanner input = new Scanner(System.in);
             choice = input.nextInt();
@@ -44,7 +45,16 @@ public class Main
                     System.out.println("Enter height");
                     height =input.nextDouble();
                 }
-            else if (choice == 9) {
+            else if(choice ==9){
+                System.out.println("Enter length");
+                double length =input.nextDouble();
+                System.out.println("Enter width");
+                double width =input.nextDouble();
+                RectArea rectArea = new RectArea();
+                double area = rectArea.calculateArea(length , width);
+                System.out.println("The area of the rectangle is "+ area);
+            }
+            else if (choice == 10) {
                 System.out.println("EXITING................");
                 break;
             } else {
